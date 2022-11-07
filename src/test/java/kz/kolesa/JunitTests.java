@@ -36,8 +36,8 @@ public class JunitTests {
             "джинсы мужские, По запросу «джинсы мужские» найдено",
             "худи с принтом, По запросу «худи с принтом» найдено"
     }) //test_data
-    @ParameterizedTest(name = "Наименование результата поиска и наличие в нем ключевого слова {0}")
-    void wildberriesSearchCommonTestDifferentExpectedText(String searchQuery, String expectedText) {
+    @ParameterizedTest(name = "The name of the search result and the presence of the keyword in it {0}")
+    void searchCommonTest(String searchQuery, String expectedText) {
         open("https://www.wildberries.ru/");
         $("#searchInput").click();
         $("#searchInput").setValue(searchQuery).pressEnter();
